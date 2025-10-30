@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CalendarHeader" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">#0A2540</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CalendarDate" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">#3A4E63</item>
+    </style>
+
+    <style name="CalendarWeekDay" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">#8F9FB0</item>
+    </style>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo (la botella vacía) -->
+    <item android:id="@android:id/background" android:drawable="@drawable/bottle_background" />
+
+    <!-- Progreso (el agua llenando la botella) -->
+    <item android:id="@android:id/progress">
+        <scale
+            android:scaleGravity="bottom"
+            android:drawable="@drawable/bottle_fill" />
+    </item>
+</layer-list>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="#81C784" /> <!-- Un verde suave y atractivo -->
+    <stroke
+        android:width="2dp"
+        android:color="#4CAF50" /> <!-- Un borde un poco más oscuro -->
+</shape>

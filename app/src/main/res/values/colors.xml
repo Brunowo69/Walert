@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores Base (Azul) -->
+    <color name="md_theme_primary">#42A5F5</color>
+    <color name="md_theme_primary_dark">#1E88E5</color>
+
+    <!-- Tema Verde -->
+    <color name="green_primary">#66BB6A</color>
+    <color name="green_primary_dark">#43A047</color>
+
+    <!-- Tema Morado -->
+    <color name="purple_primary">#AB47BC</color>
+    <color name="purple_primary_dark">#8E24AA</color>
+
+    <!-- NUEVOS COLORES -->
+    <!-- Tema Naranja -->
+    <color name="orange_primary">#FF7043</color>
+    <color name="orange_primary_dark">#F4511E</color>
+
+    <!-- Tema Rojo -->
+    <color name="red_primary">#EF5350</color>
+    <color name="red_primary_dark">#E53935</color>
+
+    <!-- Tema Cian -->
+    <color name="cyan_primary">#26C6DA</color>
+    <color name="cyan_primary_dark">#00ACC1</color>
+
+</resources>
