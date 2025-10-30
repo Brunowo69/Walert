@@ -48,7 +48,8 @@ Además, se emplean componentes nativos de Android para optimizar la interacció
 El desarrollo se realizó utilizando herramientas colaborativas para mantener una organización efectiva del equipo.  
 
 - **Repositorio GitHub:** [https://github.com/Brunowo69/Walert](https://github.com/Brunowo69/Walert)  
-- **Tablero Trello:** [https://trello.com/invite/b/690225779ed4057e6ec3a787/ATTI18386aa3d72a41a7660b0d88d8845270C960DB36/walert](https://trello.com/invite/b/690225779ed4057e6ec3a787/ATTI18386aa3d72a41a7660b0d88d8845270C960DB36/walert)  
+- **Tablero Trello:** [https://trello.com/invite/b/690225779ed4057e6ec3a787/ATTI18386aa3d72a41a7660b0d88d8845270C960DB36/walert](https://trello.com/invite/b/690225779ed4057e6ec3a787/ATTI18386aa3d72a41a7660b0d88d8845270C960DB36/walert)
+- **Presentacion:** https://www.canva.com/design/DAG3Ocxl7Rg/CE9g2TuQtgEcUQHfn1FoDg/edit?utm_content=DAG3Ocxl7Rg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 Cada integrante participó en el desarrollo del código, diseño visual, pruebas de funcionamiento y documentación del proyecto.  
 El control de versiones se realizó con GitHub, asegurando trazabilidad, respaldo y colaboración constante.  
