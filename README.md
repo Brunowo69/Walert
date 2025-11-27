@@ -40,7 +40,7 @@ Cumple con los requerimientos establecidos en EP4 (entrega funcional) y EP5 (def
 - Arquitectura MVVM  
 - Navegación mediante Navigation Compose  
 
-### Microservicio Spring Boot
+### Microservicios
 - CRUD completo para la entidad WaterRecord  
 - Persistencia remota en base de datos  
 - Endpoints REST simples  
