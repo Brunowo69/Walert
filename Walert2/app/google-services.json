@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "717043513063",
+    "project_id": "walert-a88f1968",
+    "storage_bucket": "walert-a88f1968.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717043513063:android:f24be560f6336366505442",
+        "android_client_info": {
+          "package_name": "com.example.walert"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKmoBaq-QCUphEyFhSZqRGWiQHW-8Hkxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
