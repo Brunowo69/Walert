@@ -1,93 +1,101 @@
-# 🚰 Walert2 — Aplicación de Control de Hidratación  
-### Desarrollo de Aplicaciones Móviles — DSY1105  
-### Evaluaciones Parcial 4  y Parcial 5 
+# Walert2 — Aplicación de Control de Hidratación  
+Desarrollo de Aplicaciones Móviles — DSY1105  
+Evaluaciones Parcial 4 y Parcial 5
 
 ---
 
-## 📌 1. Descripción del Proyecto
-Walert2 es una aplicación móvil desarrollada en **Kotlin + Jetpack Compose** cuyo objetivo es ayudar a los usuarios a monitorear y mejorar su hidratación diaria.
+## 1. Descripción del Proyecto  
+Walert2 es una aplicación móvil desarrollada en Kotlin con Jetpack Compose que permite a los usuarios registrar, monitorear y mejorar su hidratación diaria.
 
-La app permite registrar el consumo de agua, visualizar el historial, recibir notificaciones programadas, revisar logros obtenidos y consumir información externa mediante APIs.  
-Además, integra un **microservicio propio en Spring Boot** para persistencia remota en tiempo real, cumpliendo los requisitos del Examen Final Transversal.
+El proyecto incluye:
+- Registro de consumo de agua
+- Historial y calendario
+- Sistema de logros
+- Recordatorios locales
+- Consumo de API externa
+- Conexión a microservicio Spring Boot
+- Pruebas unitarias
+- APK firmada
+
+Cumple con los requerimientos establecidos en EP4 (entrega funcional) y EP5 (defensa técnica individual) para la asignatura DSY1105.
 
 ---
 
-## 👥 2. Integrantes del equipo
-- **Bruno Araya** — Desarrollo móvil, arquitectura MVVM, integración con microservicio, Retrofit, UI Compose.  
-- **Matías Cerda** — Backend Spring Boot, API externa, pruebas unitarias, documentación técnica.
+## 2. Integrantes  
+- Bruno Araya  
+- Matías Cerda  
 
 ---
 
-## 🎯 3. Funcionalidades principales
+## 3. Funcionalidades Principales  
 
-### 📱 Aplicación móvil (Android + Compose)
-- Registro de consumo de agua diario  
+### Aplicación móvil (Kotlin + Jetpack Compose)
+- Registro diario de hidratación  
 - Visualización del progreso  
-- Historial completo del usuario  
-- Ajuste de metas y logros (Achievements)  
-- Calendario de hidratación  
-- Notificaciones locales (recordatorios)  
+- Historial completo  
+- Ajuste de metas  
+- Sistema de logros  
+- Notificaciones locales  
 - Pantalla dedicada para API externa  
-- Arquitectura **MVVM + State Hoisting**
+- Arquitectura MVVM  
+- Navegación mediante Navigation Compose  
 
-### 🌐 Conexión con microservicio Spring Boot
-- CRUD completo de registros de hidratación (**WaterRecord**)  
+### Microservicio Spring Boot
+- CRUD completo para la entidad WaterRecord  
 - Persistencia remota en base de datos  
-- Endpoints funcionales (GET, POST, PUT, DELETE)  
-- Consumo en tiempo real desde la app mediante Retrofit
+- Endpoints REST simples  
+- Comunicación en tiempo real con Retrofit  
 
-### 🌍 API externa
-- Consumo de una API externa mediante Retrofit (Dog API)  
-- Visualización de imagen aleatoria integrada en la interfaz
+### API Externa
+API utilizada: Dog API (imagen aleatoria)  
+https://dog.ceo/api/breeds/image/random
 
-### 🧪 Pruebas unitarias
-- Tests con **JUnit5** y **MockK**  
-- Pruebas de ViewModel  
-- Simulación de respuestas de backend  
-- Cobertura lógica estimada: +80%  
+Se muestra en tiempo real dentro de la aplicación.
 
-### 📦 Publicación (APK)
-- Generación de APK firmada (modo Release)  
-- Llave `.jks` incluida  
-- Configuración de firma en Gradle  
+### Pruebas Unitarias
+- Implementadas en ViewModel  
+- Mock de llamadas REST  
+- JUnit 5 + MockK  
+- Pruebas de cálculos de hidratación  
+- Cobertura lógica superior al 80%  
+
+### APK Firmada
+- Archivo Walert2-release.apk  
+- Llave walert2-key.jks  
+- Configuración Release en Gradle  
 
 ---
 
-## 🔗 4. Arquitectura del proyecto
+## 4. Arquitectura del Proyecto  
 
-### 🟦 App móvil (Kotlin + Compose)
+### App móvil (Compose + MVVM)
 app/
-├── components/
 ├── screens/
 ├── viewmodel/
+├── components/
 ├── navigation/
-├── network/ (Retrofit)
-└── data/ (Repositorios locales y remotos)
+├── network/
+└── data/
 
 shell
 Copiar código
 
-### 🟩 Microservicio Spring Boot
+### Microservicio Spring Boot
 backend/
 ├── controller/
 ├── service/
 ├── repository/
 ├── model/
-└── configuration/
+└── config/
 
 yaml
 Copiar código
 
-Arquitecturas utilizadas:
-- **MVVM** en Android  
-- **REST** en Spring Boot  
-- Repositorio remoto + repositorio local  
-
 ---
 
-## 🛢️ 5. Endpoints utilizados (Microservicio)
+## 5. Endpoints del Microservicio
 
-### Entidad: `WaterRecord`
+Entidad: WaterRecord
 ```json
 {
   "id": 1,
@@ -95,18 +103,18 @@ Arquitecturas utilizadas:
   "date": "2025-01-01",
   "userId": 1
 }
-Endpoints REST
+Endpoints:
+
 bash
 Copiar código
 GET     /water/list
 POST    /water/add
 PUT     /water/update/{id}
 DELETE  /water/delete/{id}
-Base de datos utilizada: MySQL / H2
-CRUD validado desde la aplicación móvil.
+Swagger no se utiliza en esta asignatura.
 
-🌍 6. API Externa integrada
-API utilizada: Dog CEO — Imagen aleatoria
+6. API Externa Integrada
+Dog API – Imagen aleatoria
 https://dog.ceo/api/breeds/image/random
 
 Ejemplo de respuesta:
@@ -114,116 +122,112 @@ Ejemplo de respuesta:
 json
 Copiar código
 {
-  "message": "https://images.dog.ceo/breeds/husky/n02110185_1469.jpg",
+  "message": "https://images.dog.ceo/breeds/husky/example.jpg",
   "status": "success"
 }
-La app muestra la imagen en tiempo real en una pantalla dedicada.
-
-🧪 7. Pruebas unitarias
-Tecnologías:
+7. Pruebas Unitarias
+Tecnologías utilizadas:
 
 JUnit 5
 
 MockK
 
-CoroutinesTest
+Coroutines Test
 
-Aspectos cubiertos:
+Aspectos evaluados:
 
-Lógica del WaterViewModel
+Lógica del ViewModel
 
-Actualización del consumo
+Estados UI
 
-Estados UI (Loading / Success / Error)
+Validación de datos
 
-Mock de llamadas REST
+Simulación de llamadas REST
 
-Validación de input de hidratación
-
-Cobertura requerida: ≥80%
-
-🛠️ 8. Instrucciones de ejecución
+8. Instrucciones de Ejecución
 Backend (Spring Boot)
 Abrir carpeta /backend en IntelliJ
 
 Ejecutar:
 
-bash
+arduino
 Copiar código
 ./mvnw spring-boot:run
-Acceder a Swagger:
+Backend disponible en:
 
-bash
+arduino
 Copiar código
-http://localhost:8080/swagger-ui.html
+http://localhost:8080
+Swagger y Postman no se utilizan en DSY1105.
+
 App Android (Android Studio)
 Abrir carpeta /Walert2
 
-Iniciar sincronización Gradle
+Sincronizar Gradle
 
 Ejecutar en emulador o dispositivo físico
 
-Verificar comunicación con backend
+Verificar conexión con backend
 
 Probar CRUD desde la interfaz
 
-📦 9. APK Firmado y Llave
-Ubicado en la carpeta /apk:
+9. APK Firmada
+Archivos incluidos:
 
 Walert2-release.apk
 
 walert2-key.jks
 
-Capturas del proceso de firma
+Configuración Release en Gradle aplicada correctamente.
 
-Configuración en build.gradle para release
-
-📋 10. Planificación y control de versiones
-🟦 GitHub
-Repositorio oficial del proyecto:
-👉 https://github.com/Brunowo69/Walert
+10. Planificación y Control de Versiones
+GitHub
+Repositorio oficial:
+https://github.com/Brunowo69/Walert
 
 Incluye:
 
-Commits individuales de Bruno y Matías
+Evidencia real de commits
 
-Mensajes técnicos claros
+Ramas independientes
 
-Uso de ramas (bruno-dev, matias-backend, etc.)
+Control de versiones del móvil y backend
 
-Pull requests y merges
+Trello
+Tablero oficial del proyecto:
+https://trello.com/invite/b/69277d8c094c51f2ba33b23b/ATTI260b1eccfb3566bba46838636b25e0a74F522AEE/walert-desarrollo-de-aplicaciones-moviles
 
-🟩 Trello (Planificación)
-Tablero oficial del proyecto (EP4 + EP5):
-👉 https://trello.com/invite/b/69277d8c094c51f2ba33b23b/ATTI260b1eccfb3566bba46838636b25e0a74F522AEE/walert-desarrollo-de-aplicaciones-moviles
-
-Columnas del tablero:
+Columnas:
 
 Backlog
 
 En progreso
 
-App móvil
-
 Backend
 
-Listo / Completado
+App móvil
 
-🏁 11. Estado actual del proyecto
-✔ App móvil funcional
-✔ Microservicio Spring Boot operativo
-✔ CRUD funcionando en tiempo real
-✔ API externa integrada exitosamente
-✔ Pruebas unitarias ejecutándose
-✔ APK firmada
-✔ Documentación completa
-✔ GitHub y Trello con evidencias reales
+Completado
 
-👨‍🏫 12. Autores
-Desarrollado por:
+11. Estado Actual del Proyecto
+Aplicación móvil funcional
 
+Microservicio operativo
+
+CRUD completo
+
+API externa integrada
+
+Pruebas unitarias implementadas
+
+APK firmada
+
+Documentación técnica finalizada
+
+Evidencias en GitHub y Trello
+
+12. Autores
 Bruno Araya
 
 Matías Cerda
-
 Duoc UC — 2025
