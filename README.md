@@ -47,8 +47,8 @@ Cumple con los requerimientos establecidos en EP4 (entrega funcional) y EP5 (def
 - Comunicación en tiempo real con Retrofit  
 
 ### API Externa
-API utilizada: Dog API (imagen aleatoria)  
-https://dog.ceo/api/breeds/image/random
+API utilizada: OpenWeatherMap  
+[https://dog.ceo/api/breeds/image/random](https://openweathermap.org/api)
 
 Se muestra en tiempo real dentro de la aplicación.
 
