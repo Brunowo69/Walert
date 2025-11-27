@@ -95,27 +95,9 @@ Copiar código
 
 ## 5. Endpoints del Microservicio
 
-Entidad: WaterRecord
-```json
-{
-  "id": 1,
-  "amount": 250,
-  "date": "2025-01-01",
-  "userId": 1
-}
-Endpoints:
 
-bash
-Copiar código
-GET     /water/list
-POST    /water/add
-PUT     /water/update/{id}
-DELETE  /water/delete/{id}
-Swagger no se utiliza en esta asignatura.
 
-6. API Externa Integrada
-Dog API – Imagen aleatoria
-https://dog.ceo/api/breeds/image/random
+
 
 Ejemplo de respuesta:
 
